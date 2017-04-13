@@ -35,7 +35,7 @@ OBJS = $(SRCS:.c=.o)
 
 ###################################################
 
-.PHONY: lib proj debug clean
+.PHONY: all lib proj debug clean
 
 all: lib proj
 
