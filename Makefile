@@ -12,8 +12,8 @@ GDB = arm-none-eabi-gdb
 
 CFLAGS = -g -Wall -Tstm32_flash.ld 
 CFLAGS += -mlittle-endian -mthumb -mcpu=cortex-m4
-#CFLAGS += -mthumb-interwork # no need to interwork
 CFLAGS += -mfloat-abi=hard -mfpu=fpv4-sp-d16
+
 # for benchmark
 #CFLAGS += -mabi=aapcs
 #CFLAGS += -specs=rdimon.specs -lgcc -lc -lm -lrdimon
@@ -35,9 +35,9 @@ OBJS = $(SRCS:.c=.o)
 
 ###################################################
 
-.PHONY: lib proj
+.PHONY: lib proj debug clean
 
-all: lib proj debug clean
+all: lib proj
 
 lib:
 	$(MAKE) -C lib
